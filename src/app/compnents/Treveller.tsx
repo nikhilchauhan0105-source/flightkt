@@ -75,7 +75,7 @@ function TravelerClassSelector() {
 
       {/* Dropdown */}
       {isOpen && (
-        <div className="absolute   right-0 top-full mt-2 bg-white rounded-lg shadow-lg/50 border border-gray-200 p-6 z-50 w-[700px]">
+        <div className="absolute   right-0 top-full mt-2 bg-white rounded-lg shadow-lg/50 border border-gray-200 p-6 z-50 w-full max-w-175">
           {/* Adults */}
           <div className="mb-6">
             <div className="font-semibold text-black text-sm mb-1">

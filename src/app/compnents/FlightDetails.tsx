@@ -122,42 +122,7 @@ const handleasearch = () => {
             {/* Travellers & Class */}
             <TravelerClassSelector />
           </div>
-          {/* Special Fares */}
-          {/* <div className="mt-6 flex items-center gap-3">
-            <span className="text-sm font-semibold text-gray-800">
-              SPECIAL FARES
-            </span>
-            <button className="px-4 py-2 bg-blue-50 text-blue-600 rounded-lg text-sm font-medium border border-blue-200">
-              Regular{" "}
-              <span className="block text-xs font-normal text-gray-600">
-                Regular fares
-              </span>
-            </button>
-            <button className="px-4 py-2 bg-white text-gray-600 rounded-lg text-sm font-medium border border-gray-200 hover:border-gray-300">
-              Student{" "}
-              <span className="block text-xs font-normal text-gray-500">
-                Extra discounts/baggage
-              </span>
-            </button>
-            <button className="px-4 py-2 bg-white text-gray-600 rounded-lg text-sm font-medium border border-gray-200 hover:border-gray-300">
-              Armed Forces{" "}
-              <span className="block text-xs font-normal text-gray-500">
-                Up to ₹ 600 off
-              </span>
-            </button>
-            <button className="px-4 py-2 bg-white text-gray-600 rounded-lg text-sm font-medium border border-gray-200 hover:border-gray-300">
-              Senior Citizen{" "}
-              <span className="block text-xs font-normal text-gray-500">
-                Up to ₹ 600 off
-              </span>
-            </button>
-            <button className="px-4 py-2 bg-white text-gray-600 rounded-lg text-sm font-medium border border-gray-200 hover:border-gray-300">
-              Doctor and Nurses{" "}
-              <span className="block text-xs font-normal text-gray-500">
-                Up to ₹ 600 off
-              </span>
-            </button>
-          </div> */}
+      
           {/* Search Button */}
           <div className="mt-2 flex w-full justify-center">
             <Link className="w-full" href={"/Tickets"}>

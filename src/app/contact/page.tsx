@@ -33,11 +33,11 @@ const contacts = [
     iconBg: "bg-violet-500/70",
     title: "Email Support",
     desc: "For non-urgent queries, documentation and refund requests. Reply within 4–6 hours.",
-    link: "mailto:deenutravels777@gmail.com",
+    link: "mailto:support.ptravels@gmail.com?subject=Flight Booking&body=Hello I want to book a flight",
     linkLabel: "support@deenutravels.com",
     hoverBorder: "hover:border-violet-400/50",
     linkColor: "text-violet-300",
-    external: false,
+    external: true,
   },
 ];
 
@@ -331,7 +331,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 />
               </div>
               <div>
-                <label className={label}>Booking Ref.</label>
+                <label className={label}>FKT Special CODE</label>
                 <input
                   type="text"
                   name="bookingRef"
