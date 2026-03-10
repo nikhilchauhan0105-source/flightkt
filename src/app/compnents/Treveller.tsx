@@ -75,7 +75,7 @@ function TravelerClassSelector() {
 
       {/* Dropdown */}
       {isOpen && (
-        <div className="absolute   right-0 top-full mt-2 bg-white rounded-lg shadow-lg/50 border border-gray-200 p-6 z-50 w-full max-w-175">
+        <div className="absolute right-0 top-full mt-2 bg-white rounded-lg shadow-lg border border-gray-200 p-4 sm:p-6 z-50 w-screen max-w-full sm:max-w-175 left-0 sm:left-auto">
           {/* Adults */}
           <div className="mb-6">
             <div className="font-semibold text-black text-sm mb-1">
@@ -84,7 +84,7 @@ function TravelerClassSelector() {
             <div className="text-xs text-gray-500 mb-3">
               on the day of travel
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
                 <button
                   key={num}
@@ -112,16 +112,16 @@ function TravelerClassSelector() {
           </div>
 
           {/* Children and Infants */}
-          <div className="grid grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             {/* Children */}
             <div>
-              <div className="font-semibold  text-black text-sm mb-1">
+              <div className="font-semibold text-black text-sm mb-1">
                 CHILDREN (2y - 12y)
               </div>
               <div className="text-xs text-gray-500 mb-3">
                 on the day of travel
               </div>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 {[0, 1, 2, 3, 4, 5, 6].map((num) => (
                   <button
                     key={num}
@@ -150,13 +150,13 @@ function TravelerClassSelector() {
 
             {/* Infants */}
             <div>
-              <div className="font-semibold  text-black text-sm mb-1">
+              <div className="font-semibold text-black text-sm mb-1">
                 INFANTS (below 2y)
               </div>
               <div className="text-xs text-gray-500 mb-3">
                 on the day of travel
               </div>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 {[0, 1, 2, 3, 4, 5, 6].map((num) => (
                   <button
                     key={num}
@@ -189,7 +189,7 @@ function TravelerClassSelector() {
             <div className="font-semibold text-black text-sm mb-3">
               CHOOSE TRAVEL CLASS
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {[
                 "Economy/Premium Economy",
                 "Premium Economy",
@@ -199,7 +199,7 @@ function TravelerClassSelector() {
                 <button
                   key={cls}
                   onClick={() => setTravelClass(cls)}
-                  className={`px-4 py-2 rounded ${
+                  className={`px-3 py-2 text-sm rounded ${
                     travelClass === cls
                       ? "bg-blue-500 text-white"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"

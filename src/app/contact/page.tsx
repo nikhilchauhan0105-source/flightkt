@@ -142,7 +142,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         }}
       />
 
-      <div className="relative z-10 max-w-full mt-20 mx-auto px-5 sm:px-8">
+      <div className="relative z-10 max-w-full mt-20 mx-auto px-3 sm:px-5 sm:px-8">
         <section className="pt-8 pb-16">
           <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/25 rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase tracking-widest mb-6">
             <span className="w-1.5 h-1.5 bg-black rounded-full animate-pulse" />
@@ -264,7 +264,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-blue-400 border border-white rounded-2xl p-7 flex flex-col gap-5"
+            className="bg-blue-400 border border-white rounded-2xl p-3 sm:p-7 flex flex-col gap-5"
           >
             <div className="grid grid-cols-2 gap-4">
               <div>
