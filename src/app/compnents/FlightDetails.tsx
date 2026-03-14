@@ -128,7 +128,7 @@ const handleasearch = () => {
             <Link className="w-full" href={"/Tickets"}>
               <button
                 onClick={() => handleasearch()}
-                className="bg-blue-500 w-full hover:bg-blue-800 hover:shadow-md/50 cursor-pointer transition-all duration-150 text-white sm:px-20 py-1 sm:py-2 rounded-full text-lg font-bold shadow-lg "
+                className="bg-primary w-full hover:bg-blue-700 hover:shadow-md/50 cursor-pointer transition-all duration-150 text-white sm:px-20 py-1 sm:py-2 rounded-full text-lg font-bold shadow-lg "
               >
                 SEARCH
               </button>

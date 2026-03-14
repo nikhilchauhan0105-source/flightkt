@@ -1,17 +1,33 @@
 "use client";
 
+import Link from "next/link";
+
 
 const FooterSection = () => {
-
   const footerLinks = {
-    Explore: ["Flights", "Deals & Offers", "Popular Routes", "Last Minute Flights", "Charter Flights"],
-    Company: ["About Us", "Careers", "Press Room", "Investor Relations", "Sustainability"],
-    Support: ["Help Center", "Contact Us", "Flight Status", "Baggage Policy", "Accessibility"],
-    Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy", "Refund Policy", "Sitemap"],
+    Explore: [
+      { id: "/", label: "Packages" },
+      { id: "/", label: "Deals & Offers" },
+    ],
+    Company: [
+      { id: "aboutus", label: "About Us" },
+    ],
+    Support: [
+      { id: "contact", label: "Help Center" },
+      { id: "contact", label: "Contact Us" },
+    ],
+   
   };
+
+  const bottomLinks = [
+    { id: "Privacy", label: "Privacy" },
+    { id: "Terms", label: "Terms" },
+    { id: "Cookies", label: "Cookies" },
+  ];
 
   const socialLinks = [
     {
+      id: "social-link-twitter",
       label: "Twitter",
       icon: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -20,6 +36,7 @@ const FooterSection = () => {
       ),
     },
     {
+      id: "social-link-instagram",
       label: "Instagram",
       icon: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -28,6 +45,7 @@ const FooterSection = () => {
       ),
     },
     {
+      id: "social-link-facebook",
       label: "Facebook",
       icon: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -36,6 +54,7 @@ const FooterSection = () => {
       ),
     },
     {
+      id: "social-link-youtube",
       label: "YouTube",
       icon: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -44,6 +63,7 @@ const FooterSection = () => {
       ),
     },
     {
+      id: "social-link-linkedin",
       label: "LinkedIn",
       icon: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -53,20 +73,23 @@ const FooterSection = () => {
     },
   ];
 
-
   return (
     <footer className="bg-gradient-to-b from-sky-50 to-sky-100  border-sky-200 font-sans">
       {/* Top Wave Divider */}
-      <div className="w-full overflow-hidden leading-none">
-        <svg className="w-full h-25 text-sky-300" viewBox="0 0 1440 32" fill="currentColor" preserveAspectRatio="none">
+      <div className="w-full overflow-hidden drop-shadow-lg/40 leading-none">
+        <svg
+          className="w-full h-25 text-primary"
+          viewBox="0 0 1440 32"
+          fill="currentColor"
+          preserveAspectRatio="none"
+        >
           <path d="M0,16 C360,32 1080,0 1440,16 L1440,0 L0,0 Z" />
         </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
-
         {/* Newsletter Strip */}
-        <div className="bg-gradient-to-r from-sky-500 to-cyan-400 rounded-2xl p-6 sm:p-8 mb-12 shadow-lg shadow-sky-200 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-primary to-cyan-400 rounded-2xl p-6 sm:p-8 mb-12 shadow-lg shadow-sky-200 relative overflow-hidden">
           {/* Decorative circles */}
           <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full bg-white/10 pointer-events-none" />
           <div className="absolute -bottom-6 -left-6 w-28 h-28 rounded-full bg-white/10 pointer-events-none" />
@@ -74,30 +97,48 @@ const FooterSection = () => {
 
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-white text-center md:text-left">
-              <p className="text-xs font-semibold uppercase tracking-widest text-sky-100 mb-1">Exclusive Deals</p>
-              <h3 className="text-xl sm:text-2xl font-bold">Get Flight Alerts First </h3>
-              <p className="text-sky-100 text-sm mt-1">Join 2M+ travelers. Unsubscribe anytime.</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-sky-100 mb-1">
+                Exclusive Deals
+              </p>
+              <h3 className="text-xl sm:text-2xl font-bold">
+                Get Flight Alerts First{" "}
+              </h3>
+              <p className="text-sky-100 text-sm mt-1">
+                Join 2M+ travelers. Unsubscribe anytime.
+              </p>
             </div>
           </div>
         </div>
 
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand Column */}
           <div className="col-span-2 sm:col-span-2 lg:col-span-2">
             {/* Logo */}
             <div className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 bg-sky-500 rounded-xl flex items-center justify-center shadow-md">
-                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                  />
                 </svg>
               </div>
-              <span className="text-sky-800 font-bold text-xl tracking-tight">FlightKT</span>
+              <span className="text-sky-800 font-bold text-xl tracking-tight">
+                FlightKT
+              </span>
             </div>
 
             <p className="text-black text-sm leading-relaxed mb-5 max-w-xs">
-              Your trusted partner for seamless travel. Discover the world with the best fares, real-time tracking, and 24/7 support.
+              Your trusted partner for seamless travel. Discover the world with
+              the best fares, real-time tracking, and 24/7 support.
             </p>
 
             {/* Social Icons */}
@@ -105,6 +146,7 @@ const FooterSection = () => {
               {socialLinks.map((s) => (
                 <button
                   key={s.label}
+                  id={s.id}
                   aria-label={s.label}
                   className="w-8 h-8 bg-sky-100 hover:bg-sky-500 text-sky-500 hover:text-white rounded-lg flex items-center justify-center transition-all duration-200 border border-sky-200 hover:border-sky-500"
                 >
@@ -114,23 +156,24 @@ const FooterSection = () => {
             </div>
 
             {/* App Badges */}
-           
           </div>
 
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category} className="col-span-1">
-              <h4 className="text-sky-900 font-bold text-sm uppercase tracking-widest mb-4">{category}</h4>
+              <h4 className="text-sky-900 font-bold text-sm uppercase tracking-widest mb-4">
+                {category}
+              </h4>
               <ul className="space-y-2.5">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                {links.map((link , index) => (
+                    <Link key={index}
+                      href={` ${link.id}`}
                       className="text-black hover:text-sky-900 text-sm transition-colors duration-150 hover:underline underline-offset-2"
                     >
-                      {link}
-                    </a>
+                  <li key={link.id}>
+                      {link.label}
                   </li>
+                    </Link>
                 ))}
               </ul>
             </div>
@@ -138,22 +181,31 @@ const FooterSection = () => {
         </div>
 
         {/* Trust Badges */}
-      
 
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-sky-500">
           <p>© {new Date().getFullYear()} SkyRoute Inc. All rights reserved.</p>
           <div className="flex items-center gap-1 text-sky-400">
             <span>Made with</span>
-            <svg className="w-4 h-4 text-sky-400 fill-current" viewBox="0 0 20 20">
+            <svg
+              className="w-4 h-4 text-sky-400 fill-current"
+              viewBox="0 0 20 20"
+            >
               <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
             </svg>
             <span>for travelers worldwide</span>
           </div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-sky-700 transition-colors">Privacy</a>
-            <a href="#" className="hover:text-sky-700 transition-colors">Terms</a>
-            <a href="#" className="hover:text-sky-700 transition-colors">Cookies</a>
+            {bottomLinks.map((link) => (
+              <a
+                key={link.id}
+                id={link.id}
+                href="#"
+                className="hover:text-sky-700 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

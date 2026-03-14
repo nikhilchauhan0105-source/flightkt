@@ -386,7 +386,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             <button
               type="submit"
               disabled={loading}
-              className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold rounded-xl py-4 text-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(30,111,255,0.5)] disabled:opacity-60 disabled:cursor-not-allowed shadow-[0_4px_18px_rgba(30,111,255,0.35)]"
+              className="flex items-center justify-center gap-2 bg-primary  hover:bg-blue-700 hover:shadow-lg/50 text-white font-bold rounded-xl py-4 text-sm transition-all hover:-translate-y-0.5  disabled:opacity-60 disabled:cursor-not-allowed "
             >
               {loading ? (
                 <>
@@ -399,7 +399,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             </button>
 
             {submitted && (
-              <div className="flex items-center gap-3 bg-green-500/10 border border-green-500/25 rounded-xl px-4 py-3 text-green-400 text-sm">
+              <div className="flex items-center gap-3 bg-green-500 border border-green-500/25 rounded-xl px-4 py-3 text-white text-sm">
                 <span>check</span> Message sent! We will reply within 2 hours.
               </div>
             )}
@@ -413,25 +413,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </form>
         </section>
 
-        <footer className="border-t  py-7 flex flex-wrap items-center justify-between gap-4 text-xs  mb-4">
-          <span>2025 SkyAssist Flight Support. All rights reserved.</span>
-          <div className="flex gap-6">
-            <a href="#" className="hover:underline transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:underline transition-colors">
-              Terms of Service
-            </a>
-            <a
-              href="https://wa.me/919630974127"
-              target="_blank"
-              rel="noreferrer"
-              className="text-green-400 hover:text-green-300 transition-colors"
-            >
-              WhatsApp Us
-            </a>
-          </div>
-        </footer>
+      
       </div>
     </div>
   );

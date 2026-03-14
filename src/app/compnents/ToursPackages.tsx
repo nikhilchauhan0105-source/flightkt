@@ -84,7 +84,7 @@ export default function TourPackages() {
   ];
 
   return (
-    <section className="py-16 ">
+    <section id="Package" className="py-16 ">
       <div className="mx-auto px-6" style={{ maxWidth: "1340px" }}>
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -155,11 +155,11 @@ export default function TourPackages() {
                 <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                   <div>
                     <span className="text-sm text-gray-500">Starting from</span>
-                    <p className="text-2xl font-bold text-blue-600">
-                     ₹{pkg.price}
+                    <p className="text-2xl font-bold text-primary">
+                      ₹{pkg.price}
                     </p>
                   </div>
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                  <button className="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
                     Book Now
                   </button>
                 </div>

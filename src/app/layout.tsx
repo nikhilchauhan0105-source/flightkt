@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./compnents/Navbar";
 import { AirportProvider } from "./context/AppContext";
 import { Metadata } from "next";
+import FooterSection from "./compnents/FooterSection";
 
 
 
@@ -15,6 +16,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <AirportProvider>{children}</AirportProvider>
+        <FooterSection/>
       </body>
     </html>
   );
