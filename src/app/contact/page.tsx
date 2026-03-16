@@ -143,7 +143,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       />
 
       <div className="relative z-10 max-w-full mt-20 mx-auto px-3 sm:px-5 sm:px-8">
-        <section className="pt-8 pb-16">
+        <section className="pt-8 pb-5 md:pb-16">
           <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/25 rounded-full px-4 py-1.5 text-[10px] font-semibold uppercase tracking-widest mb-6">
             <span className="w-1.5 h-1.5 bg-black rounded-full animate-pulse" />
             24/7 Support Active
@@ -169,23 +169,18 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             >
               WhatsApp Us Now
             </Link>
-            <a
-              href="tel:+919630974127"
-              className="flex items-center gap-2 bg-white/5 border border-white/10 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/10 hover:-translate-y-0.5 transition-all"
-            >
-              Call Support
-            </a>
+          
           </div>
         </section>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-5 md:mb-16">
           {contacts.map((c) => (
             <Link
               key={c.title}
               href={c.link}
               target={c.external ? "_blank" : undefined}
               rel={c.external ? "noreferrer" : undefined}
-              className={`group block bg-blue-500 hover:bg-blue-600 border border-white/[0.08] hover:shadow-lg/50 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 ${c.hoverBorder} no-underline`}
+              className={`group block bg-blue-500 hover:bg-blue-600 border border-white/[0.08] hover:shadow-lg/50 rounded-3xl p-3 sm:p-6 transition-all duration-300 hover:-translate-y-1 ${c.hoverBorder} no-underline`}
             >
               <div
                 className={`w-12 h-12 ${c.iconBg} rounded-2xl flex items-center justify-center text-2xl mb-5`}
@@ -195,7 +190,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               <h3 className="font-extrabold text-lg text-white tracking-tight mb-2">
                 {c.title}
               </h3>
-              <p className="leading-relaxed mb-5 font-medium text-white">
+              <p className=" mb-5 font-medium text-white">
                 {c.desc}
               </p>
               <div
@@ -216,7 +211,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             <h2 className="text-3xl font-extrabold tracking-tight mb-3">
               Send us a message
             </h2>
-            <p className="text-sm leading-relaxed mb-8 font-light">
+            <p className="text-sm  mb-4  sm:mb-8 font-light">
               Fill out the form and our team will respond within 2 hours.
             </p>
 
@@ -224,13 +219,13 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               href="https://wa.me/919630974127"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-4 bg-green-400 border border-green-500/20 rounded-2xl p-5 mb-6 hover:bg-green-500 hover:border-green-500/50 transition-all group"
+              className="flex items-center gap-4 bg-green-400 border border-green-500/20 rounded-2xl p-2 sm:p-5 mb-3 sm:mb-6 hover:bg-green-500 hover:border-green-500/50 transition-all group"
             >
               <div className="w-12 h-12 bg-green-700/30 rounded-xl flex items-center justify-center text-2xl shrink-0">
                 <MessageCircleMore stroke="white" />
               </div>
               <div className="flex-1">
-                <p className="text-white font-bold text-lg mb-0.5">
+                <p className="text-white font-bold text-base sm:text-lg mb-0.5">
                   Chat on WhatsApp
                 </p>
                 <p className="text-white text-xs font-light">
@@ -242,8 +237,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               </span>
             </Link>
 
-            <div className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5">
-              <p className="text-[10px] font-semibold uppercase tracking-widest mb-4">
+            <div className="bg-white/[0.04] border border-white/[0.08] rounded-2xl sm:p-5">
+              <p className=" font-semibold uppercase tracking-widest mb-2 sm:mb-4">
                 Support Hours
               </p>
               {hours.map(([day, time, isGreen]) => (

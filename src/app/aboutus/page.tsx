@@ -330,9 +330,9 @@ export default function AboutPage(): ReactNode {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <a
+              <Link
                 id="hero-cta-search"
-                href="#"
+                href="/"
                 className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-sky-50 transition-colors text-sm shadow-lg shadow-blue-900/20"
               >
                 Search Flights
@@ -349,7 +349,7 @@ export default function AboutPage(): ReactNode {
                     d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                   />
                 </svg>
-              </a>
+              </Link>
               <a
                 id="hero-cta-story"
                 href="#our-story"
@@ -386,14 +386,14 @@ export default function AboutPage(): ReactNode {
       </section>
 
       {/* ── Mission ── */}
-      <section id="our-story" className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section id="our-story" className="py-5 lg:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-3 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-5 lg:gap-16 items-center">
             <div>
-              <span className="text-xs font-bold tracking-widest uppercase text-blue-500 mb-3 block">
+              <span className="text-xs font-bold  tracking-widest uppercase text-blue-500 mb-3 block">
                 Our Mission
               </span>
-              <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-6">
+              <h2 className="text-4xl sm:text-5xl font-black text-gray-900  mb-6">
                 Every journey starts with a single click.
               </h2>
               <p className="text-gray-500 text-lg leading-relaxed mb-5">
@@ -487,9 +487,9 @@ export default function AboutPage(): ReactNode {
       </section>
 
       {/* ── Values ── */}
-      <section className="py-24 bg-sky-50">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <section className="py-5 lg:py-24 bg-sky-50">
+        <div className="max-w-6xl mx-auto px-3 lg:px-8">
+          <div className="text-center m-5 md:mb-16">
             <span className="text-xs font-bold tracking-widest uppercase text-primary mb-3 block">
               What Drives Us
             </span>
