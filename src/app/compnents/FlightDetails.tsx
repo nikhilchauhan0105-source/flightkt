@@ -53,7 +53,10 @@ const handleasearch = () => {
     <>
       {" "}
       <section className="  relative px-3">
-        <div className=" w-full max-w-7xl relative z-20 m-auto -mt-40 shadow-md/50 md:shadow-lg/50 bg-white  rounded-2xl p-4 border border-gray-100">
+        <div
+        data-aos="fade-up"
+          className=" w-full max-w-7xl relative z-20 m-auto -mt-40 shadow-md/50 md:shadow-lg/50 bg-white  rounded-2xl p-4 border border-gray-100"
+        >
           {/* Trip Type Options */}
           <div className=" flex items-center gap-6 mb-6">
             {radio.map((obj, i) => (
@@ -122,7 +125,7 @@ const handleasearch = () => {
             {/* Travellers & Class */}
             <TravelerClassSelector />
           </div>
-      
+
           {/* Search Button */}
           <div className="mt-2 flex w-full justify-center">
             <Link className="w-full" href={"/Tickets"}>

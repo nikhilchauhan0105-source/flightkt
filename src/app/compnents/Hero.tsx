@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section
-      className={` bg-[url('/clouds.jpg')] bg-cover relative   overflow-hidden`}
+      className={` bg-[url('/clouds.jpg')] bg-cover relative overflow-hidden`}
     >
       {/* Decorative curved shapes */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
@@ -26,8 +26,13 @@ export default function Hero() {
       </div>
 
       {/* Main Container */}
-      <div className="relative  max-w-7xl mx-auto px-6 pt-8 pb-32">
-        <div className="absolute hidden lg:block  -left-90 z-10">
+      <div
+       
+        className="relative   max-w-7xl mx-auto px-6 pt-8 pb-32"
+      >
+        <div
+        data-aos="fade-right"
+        className="absolute hidden lg:block  -left-90 z-10">
           <Image
             src="/airplane.png"
             alt="Airplane"
@@ -61,7 +66,6 @@ export default function Hero() {
         </div>
 
         {/* Floating Search Card */}
-     
       </div>
     </section>
   );

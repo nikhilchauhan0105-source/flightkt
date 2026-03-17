@@ -1,10 +1,8 @@
 import "./globals.css";
 import Navbar from "./compnents/Navbar";
 import { AirportProvider } from "./context/AppContext";
-import { Metadata } from "next";
 import FooterSection from "./compnents/FooterSection";
-
-
+import AOSProvider from "./AOSProvider";
 
 export default function RootLayout({
   children,
@@ -14,9 +12,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <AirportProvider>{children}</AirportProvider>
-        <FooterSection/>
+        <AOSProvider>
+          <Navbar />
+          <AirportProvider>{children}</AirportProvider>
+          <FooterSection />
+        </AOSProvider>
       </body>
     </html>
   );
