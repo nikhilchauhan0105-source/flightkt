@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="fixed  z-50  flex  w-full  left-1/2 -translate-x-1/2 items-center justify-between bg-white text-black px-2 sm:px-8 py-2 sm:py-4   shadow-sm/50  border border-white/20">
-      <div className="flex items-center gap-2 font-semibold ">
+    <nav className="fixed  z-50  flex  w-full  left-1/2 -translate-x-1/2 items-center justify-between bg-white text-black px-2 sm:px-8 py-2    shadow-sm/50  border border-white/20">
+      <div className="flex items-center   gap-2 font-semibold ">
         <Link href={"/"}>
           <span className="font-semibold text-2xl">
             <Image src={"/flightkt-logo.jpeg"}

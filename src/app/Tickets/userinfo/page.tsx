@@ -106,9 +106,9 @@ export default function PassengerInfoPage() {
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500 opacity-5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Main */}
-      <main className="max-w-full mt-25 mx-auto px-4 md:px-6 pb-20 relative z-10">
+      <main className="max-w-full mt-25 mx-auto px-4 md:px-6  pb-10 sm:pb-20 relative z-10">
         {/* Flight Summary */}
-        <div className="flex items-center justify-between bg-blue-500 border border-white/10 backdrop-blur-md rounded-xl px-6 py-4 mb-8">
+        <div className="flex quicksand items-center font-bold justify-between bg-slate-800 border border-white/10 backdrop-blur-md rounded-xl px-6 py-4 mb-4 sm:mb-5">
           <div className="flex items-center gap-4">
             <span className="text-white text-lg font-sans tracking-wider">
               {bookedticket?.[0]?.departure_airport?.id || ""}
@@ -119,8 +119,8 @@ export default function PassengerInfoPage() {
                   ✈
                 </span>
               </div>
-              <span className=" text-black quicksand  tracking-widest">
-                {((bookedticket?.[0]?.duration ?? 0)/60).toFixed(1)} Hr
+              <span className=" text-white quicksand  tracking-widest">
+                {((bookedticket?.[0]?.duration ?? 0) / 60).toFixed(1)} Hr
               </span>
             </div>
             <span className="text-white text-lg font-sans tracking-wider">
@@ -323,7 +323,7 @@ export default function PassengerInfoPage() {
           ))}
 
           {/* Consent — once at the bottom */}
-          <div className="bg-white rounded-2xl px-8 md:px-10 py-7 shadow-md/50 mb-6">
+          <div className="bg-white rounded-xl px-4 md:px-5 py-4 shadow-md/50 mb-6">
             <div className="flex items-start gap-3">
               <input
                 type="checkbox"
@@ -354,7 +354,7 @@ export default function PassengerInfoPage() {
             <Link href={"/Tickets"}>
               <button
                 type="button"
-                className="text-slate-400 hover:text-white text-xs tracking-widest font-sans transition-colors"
+                className="text-slate-400 hover:text-black text-xs tracking-widest font-sans transition-colors"
               >
                 ← BACK TO FLIGHTS
               </button>
